@@ -1,4 +1,4 @@
-class Drifvare < ActiveRecord::Migration
+class CreateDrifvare < ActiveRecord::Migration
   def change
     create_table :drifvare do |t|
       t.text :name
