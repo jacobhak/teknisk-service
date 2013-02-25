@@ -1,14 +1,26 @@
 %p#notice= notice
 
 %p
-  %b Namn:
-  = @drifvare.namn
-%p
-  %b Adress:
-  = @drifvare.adress
+  %b Name:
+  = @drifvare.name
 %p
   %b Email:
   = @drifvare.email
+%p
+  %b Telephone:
+  = @drifvare.telephone
+%p
+  %b Address:
+  = @drifvare.address
+%p
+  %b Postal code:
+  = @drifvare.postal_code
+%p
+  %b City:
+  = @drifvare.city
+%p
+  %b Country:
+  = @drifvare.country
 
 = link_to 'Edit', edit_drifvare_path(@drifvare)
 \|

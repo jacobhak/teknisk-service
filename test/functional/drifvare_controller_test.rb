@@ -18,7 +18,7 @@ class DrifvareControllerTest < ActionController::TestCase
 
   test "should create drifvare" do
     assert_difference('Drifvare.count') do
-      post :create, drifvare: { adress: @drifvare.adress, email: @drifvare.email, namn: @drifvare.namn }
+      post :create, drifvare: { address: @drifvare.address, city: @drifvare.city, country: @drifvare.country, email: @drifvare.email, name: @drifvare.name, postal_code: @drifvare.postal_code, telephone: @drifvare.telephone }
     end
 
     assert_redirected_to drifvare_path(assigns(:drifvare))
@@ -35,7 +35,7 @@ class DrifvareControllerTest < ActionController::TestCase
   end
 
   test "should update drifvare" do
-    put :update, id: @drifvare, drifvare: { adress: @drifvare.adress, email: @drifvare.email, namn: @drifvare.namn }
+    put :update, id: @drifvare, drifvare: { address: @drifvare.address, city: @drifvare.city, country: @drifvare.country, email: @drifvare.email, name: @drifvare.name, postal_code: @drifvare.postal_code, telephone: @drifvare.telephone }
     assert_redirected_to drifvare_path(assigns(:drifvare))
   end
 

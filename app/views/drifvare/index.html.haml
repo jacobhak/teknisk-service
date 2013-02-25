@@ -2,18 +2,26 @@
 
 %table
   %tr
-    %th Namn
-    %th Adress
+    %th Name
     %th Email
+    %th Telephone
+    %th Address
+    %th Postal code
+    %th City
+    %th Country
     %th
     %th
     %th
 
   - @drifvare.each do |drifvare|
     %tr
-      %td= drifvare.namn
-      %td= drifvare.adress
+      %td= drifvare.name
       %td= drifvare.email
+      %td= drifvare.telephone
+      %td= drifvare.address
+      %td= drifvare.postal_code
+      %td= drifvare.city
+      %td= drifvare.country
       %td= link_to 'Show', drifvare
       %td= link_to 'Edit', edit_drifvare_path(drifvare)
       %td= link_to 'Destroy', drifvare, :method => :delete, :data => { :confirm => 'Are you sure?' }

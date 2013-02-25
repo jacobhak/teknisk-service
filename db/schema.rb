@@ -11,14 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130225002449) do
+ActiveRecord::Schema.define(:version => 20130225004737) do
 
   create_table "drifvare", :force => true do |t|
-    t.text     "namn"
-    t.text     "adress"
+    t.text     "name"
     t.text     "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "telephone"
+    t.text     "address"
+    t.text     "postal_code"
+    t.text     "city"
+    t.text     "country"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
