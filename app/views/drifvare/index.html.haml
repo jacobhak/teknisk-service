@@ -1,0 +1,23 @@
+%h1 Listing drifvare
+
+%table
+  %tr
+    %th Namn
+    %th Adress
+    %th Email
+    %th
+    %th
+    %th
+
+  - @drifvare.each do |drifvare|
+    %tr
+      %td= drifvare.namn
+      %td= drifvare.adress
+      %td= drifvare.email
+      %td= link_to 'Show', drifvare
+      %td= link_to 'Edit', edit_drifvare_path(drifvare)
+      %td= link_to 'Destroy', drifvare, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Drifvare', new_drifvare_path

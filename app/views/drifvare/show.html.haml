@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Namn:
+  = @drifvare.namn
+%p
+  %b Adress:
+  = @drifvare.adress
+%p
+  %b Email:
+  = @drifvare.email
+
+= link_to 'Edit', edit_drifvare_path(@drifvare)
+\|
+= link_to 'Back', drifvare_index_path

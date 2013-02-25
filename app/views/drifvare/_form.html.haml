@@ -1,0 +1,19 @@
+= form_for @drifvare do |f|
+  - if @drifvare.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@drifvare.errors.count, "error")} prohibited this drifvare from being saved:"
+      %ul
+        - @drifvare.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :namn
+    = f.text_area :namn
+  .field
+    = f.label :adress
+    = f.text_area :adress
+  .field
+    = f.label :email
+    = f.text_area :email
+  .actions
+    = f.submit 'Save'

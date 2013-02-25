@@ -1,0 +1,2 @@
+module DrifvareHelper
+end
