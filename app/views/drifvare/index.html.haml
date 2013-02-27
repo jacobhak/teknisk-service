@@ -1,6 +1,6 @@
 %h1 Listing drifvare
 
-%table
+%table.table
   %tr
     %th Name
     %th Email
@@ -9,24 +9,24 @@
     %th Postal code
     %th City
     %th Country
-    %th Admin
-    %th
-    %th
-    %th
+    - if false
+      %th Admin
+      %th
+
+
 
   - @drifvare.each do |drifvare|
     %tr
-      %td= drifvare.name
+      %td= link_to drifvare.name, drifvare
       %td= drifvare.email
       %td= drifvare.telephone
       %td= drifvare.address
       %td= drifvare.postal_code
       %td= drifvare.city
       %td= drifvare.country
-      %td= drifvare.admin
-      %td= link_to 'Show', drifvare
-      %td= link_to 'Edit', edit_drifvare_path(drifvare)
-      %td= link_to 'Destroy', drifvare, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - if !drifvare.admin?
+        %td= drifvare.admin
+        %td= link_to 'Destroy', drifvare, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

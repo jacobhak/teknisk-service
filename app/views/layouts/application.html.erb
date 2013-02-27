@@ -7,9 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="piska"><%= image_tag("piska-cerise.png", :id=>"piska-img") %></div>
   <div class="page-header">
     <ul class="nav">
-      <li><div class="span2">Här är piskan</div></li>
+      <li></li>
       <li><h1>Drifveriet.org</h1></li>
     </ul>
   </div>
@@ -21,8 +22,12 @@
       </ul>
     </div>
   </div>
-
-<%= yield %>
-
+<div class="container">
+  <div class="span10">
+    <div id="content">
+    <%= yield %>
+    </div>
+  </div>
+</div>
 </body>
 </html>
