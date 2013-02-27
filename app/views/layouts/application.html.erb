@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="page-header">
+    <ul class="nav">
+      <li><div class="span2">Här är piskan</div></li>
+      <li><h1>Drifveriet.org</h1></li>
+    </ul>
+  </div>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <ul class="nav">
+        <li><%= link_to "Drifvare", drifvare_index_path %></li>
+        <li><%= link_to "Drifverier", drifverier_path %></li>
+      </ul>
+    </div>
+  </div>
 
 <%= yield %>
 
