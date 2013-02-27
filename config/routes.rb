@@ -1,4 +1,7 @@
 Ts::Application.routes.draw do
+  resources :drifverier
+
+
   resources :drifvare
 
 

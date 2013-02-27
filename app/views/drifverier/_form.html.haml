@@ -1,0 +1,31 @@
+= form_for @drifveri do |f|
+  - if @drifveri.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@drifveri.errors.count, "error")} prohibited this drifveri from being saved:"
+      %ul
+        - @drifveri.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :year
+    = f.number_field :year
+  .field
+    = f.label :ofverdrif
+    = f.text_field :ofverdrif
+  .field
+    = f.label :direktifdrif
+    = f.text_field :direktifdrif
+  .field
+    = f.label :indrif
+    = f.text_field :indrif
+  .field
+    = f.label :tidsfordrif
+    = f.text_field :tidsfordrif
+  .field
+    = f.label :skylt
+    = f.text_field :skylt
+  .field
+    = f.label :archzero
+    = f.text_field :archzero
+  .actions
+    = f.submit 'Save'

@@ -9,6 +9,7 @@
     %th Postal code
     %th City
     %th Country
+    %th Admin
     %th
     %th
     %th
@@ -22,6 +23,7 @@
       %td= drifvare.postal_code
       %td= drifvare.city
       %td= drifvare.country
+      %td= drifvare.admin
       %td= link_to 'Show', drifvare
       %td= link_to 'Edit', edit_drifvare_path(drifvare)
       %td= link_to 'Destroy', drifvare, :method => :delete, :data => { :confirm => 'Are you sure?' }

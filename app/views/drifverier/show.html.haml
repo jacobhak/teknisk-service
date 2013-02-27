@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Year:
+  = @drifveri.year
+%p
+  %b Ofverdrif:
+  = @drifveri.ofverdrif
+%p
+  %b Direktifdrif:
+  = @drifveri.direktifdrif
+%p
+  %b Indrif:
+  = @drifveri.indrif
+%p
+  %b Tidsfordrif:
+  = @drifveri.tidsfordrif
+%p
+  %b Skylt:
+  = @drifveri.skylt
+%p
+  %b Archzero:
+  = @drifveri.archzero
+
+= link_to 'Edit', edit_drifveri_path(@drifveri)
+\|
+= link_to 'Back', drifverier_path

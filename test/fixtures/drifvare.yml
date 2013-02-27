@@ -1,19 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyText
-  email: MyText
-  telephone: MyText
-  address: MyText
-  postal_code: MyText
-  city: MyText
-  country: MyText
+  name: MyString
+  email: MyString
+  telephone: MyString
+  address: MyString
+  postal_code: MyString
+  city: MyString
+  country: MyString
+  admin: false
 
 two:
-  name: MyText
-  email: MyText
-  telephone: MyText
-  address: MyText
-  postal_code: MyText
-  city: MyText
-  country: MyText
+  name: MyString
+  email: MyString
+  telephone: MyString
+  address: MyString
+  postal_code: MyString
+  city: MyString
+  country: MyString
+  admin: false
