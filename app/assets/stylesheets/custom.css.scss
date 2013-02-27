@@ -19,7 +19,8 @@
 }
 body {
   background-image: image-url("darkdenim3.png");
-  color: #e2007f;  
+  color: #e2007f; 
+  height: 100%; 
 }
 .navbar {
   margin-bottom: 0;
@@ -39,6 +40,7 @@ body {
 
 .container {
   width: 820px;
+  min-height: 80%;
   background-image: image-url("asfalt.png");
   border-radius: 4px;
 }
@@ -47,4 +49,7 @@ a {
 }
 .span10 {
   margin-right: 20px;
+}
+html {
+  height: 100%;
 }
