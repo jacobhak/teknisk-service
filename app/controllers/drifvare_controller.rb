@@ -1,4 +1,5 @@
 class DrifvareController < ApplicationController
+  before_filter :authenticate
   # GET /drifvare
   # GET /drifvare.json
   def index

@@ -1,4 +1,5 @@
 class DrifverierController < ApplicationController
+  before_filter :authenticate
   # GET /drifverier
   # GET /drifverier.json
   def index
