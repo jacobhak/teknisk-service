@@ -1,5 +1,6 @@
 class DrifverierController < ApplicationController
   before_filter :authenticate
+  before_filter :correct_user,   only: [:edit, :update, :new]
   # GET /drifverier
   # GET /drifverier.json
   def index
@@ -81,4 +82,10 @@ class DrifverierController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+
+    def correct_user
+      redirect_to '/' unless current_user.admin?
+    end
 end

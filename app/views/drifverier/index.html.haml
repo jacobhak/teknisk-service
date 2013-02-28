@@ -9,23 +9,23 @@
     %th Tidsfordrif
     %th Skylt
     %th Archzero
-    %th
-    %th
-    %th
+    - if current_user.admin?
+      %th
+      %th
 
   - @drifverier.each do |drifveri|
     %tr
-      %td= drifveri.year
+      %td= link_to drifveri.year, drifveri
       %td= drifveri.ofverdrif_id
       %td= drifveri.direktifdrif_id
       %td= drifveri.indrif_id
       %td= drifveri.tidsfordrif_id
       %td= drifveri.skylt
       %td= drifveri.archzero
-      %td= link_to 'Show', drifveri
-      %td= link_to 'Edit', edit_drifveri_path(drifveri)
-      %td= link_to 'Destroy', drifveri, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - if current_user.admin?
+        %td= link_to 'Edit', edit_drifveri_path(drifveri)
+        %td= link_to 'Destroy', drifveri, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
-
-= link_to 'New Drifveri', new_drifveri_path
+- if current_user.admin?
+  = link_to 'New Drifveri', new_drifveri_path

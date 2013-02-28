@@ -12,7 +12,7 @@ class Drifvare < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   validates :password, presence: true, length:  { minimum: 6 }
   validates :password_confirmation, presence: true
-  validates :address, :city, :postal_code, :telephone, presence: true
+  #validates :address, :city, :postal_code, :telephone, presence: true
 
   has_secure_password
   has_and_belongs_to_many :drifveri

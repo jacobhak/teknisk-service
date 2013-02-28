@@ -21,7 +21,7 @@
 %p
   %b Archzero:
   = @drifveri.archzero
-
-= link_to 'Edit', edit_drifveri_path(@drifveri)
-\|
+- if current_user.admin?
+  = link_to 'Edit', edit_drifveri_path(@drifveri)
+  \|
 = link_to 'Back', drifverier_path

@@ -1,5 +1,6 @@
 class DrifvareController < ApplicationController
   before_filter :authenticate
+  before_filter :correct_user,   only: [:edit, :update]
   # GET /drifvare
   # GET /drifvare.json
   def index
@@ -81,4 +82,10 @@ class DrifvareController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+    def correct_user
+      @drifvare = Drifvare.find(params[:id])
+      redirect_to '/' unless current_user?(@drifvare) || current_user.admin?
+    end
 end

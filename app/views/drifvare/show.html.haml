@@ -21,9 +21,11 @@
 %p
   %b Country:
   = @drifvare.country
-%p
-  %b Admin:
-  = @drifvare.admin
-= link_to 'Edit', edit_drifvare_path(@drifvare), class: 'btn'
-\|
+- if current_user.admin?
+  %p
+    %b Admin:
+    = @drifvare.admin
+- if current_user?(@drifvare) || current_user.admin?
+  = link_to 'Edit', edit_drifvare_path(@drifvare), class: 'btn'
+  \|
 = link_to 'Back', drifvare_index_path, class: 'btn'
