@@ -1,5 +1,5 @@
 %p#notice= notice
-
+= gravatar_for @drifvare
 %p
   %b Name:
   = @drifvare.name
@@ -24,7 +24,6 @@
 %p
   %b Admin:
   = @drifvare.admin
-
-= link_to 'Edit', edit_drifvare_path(@drifvare)
+= link_to 'Edit', edit_drifvare_path(@drifvare), class: 'btn'
 \|
-= link_to 'Back', drifvare_index_path
+= link_to 'Back', drifvare_index_path, class: 'btn'

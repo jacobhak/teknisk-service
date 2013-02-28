@@ -3,6 +3,10 @@ Ts::Application.routes.draw do
 
 
   resources :drifvare
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/login', to: 'sessions#new'
+  match '/logout', to: 'sessions#destroy', via: :delete
 
 
   # The priority is based upon order of creation:
