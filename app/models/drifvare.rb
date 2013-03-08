@@ -1,6 +1,7 @@
 class Drifvare < ActiveRecord::Base
   attr_accessible :address, :admin, :city, :country, :email, :name, :postal_code, :telephone, 
-    :password, :password_confirmation
+    :password, :password_confirmation, :drifveri_ids
+
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
@@ -15,8 +16,8 @@ class Drifvare < ActiveRecord::Base
   #validates :address, :city, :postal_code, :telephone, presence: true
 
   has_secure_password
-  has_and_belongs_to_many :drifveri
-
+  has_and_belongs_to_many :drifverier
+  accepts_nested_attributes_for :drifverier
   private
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64

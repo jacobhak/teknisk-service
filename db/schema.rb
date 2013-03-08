@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130228005412) do
+ActiveRecord::Schema.define(:version => 20130308172021) do
 
   create_table "drifvare", :force => true do |t|
     t.string   "name"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20130228005412) do
 
   add_index "drifvare", ["remember_token"], :name => "index_drifvare_on_remember_token"
 
-  create_table "drifvare_drifveri", :id => false, :force => true do |t|
+  create_table "drifvare_drifverier", :id => false, :force => true do |t|
     t.integer "drifvare_id"
     t.integer "drifveri_id"
   end

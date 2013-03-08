@@ -1,4 +1,4 @@
-= form_for @drifvare do |f|
+= semantic_form_for @drifvare do |f|
   - if @drifvare.errors.any?
     #error_explanation
       %h2= "#{pluralize(@drifvare.errors.count, "error")} prohibited this drifvare from being saved:"
@@ -33,6 +33,9 @@
   .field
     = f.label :country
     = f.text_field :country
+  .field
+    = f.label :drifverier
+    = f.input :drifverier
   - if current_user.admin?
     .field
       = f.label :admin

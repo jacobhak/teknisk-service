@@ -5,7 +5,7 @@
   = @drifveri.year
 %p
   %b Ofverdrif:
-  = @drifveri.ofverdrif_id
+  = link_to @ofverdrif.name, drifvare_path(@ofverdrif)
 %p
   %b Direktifdrif:
   = @drifveri.direktifdrif_id
@@ -18,6 +18,10 @@
 %p
   %b Skylt:
   = @drifveri.skylt
+%ul
+  - @drifveri.drifvare.each do |drifvare|
+    %li= link_to drifvare.name, drifvare_path(drifvare)
+
 %p
   %b Archzero:
   = @drifveri.archzero

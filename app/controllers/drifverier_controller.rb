@@ -16,7 +16,7 @@ class DrifverierController < ApplicationController
   # GET /drifverier/1.json
   def show
     @drifveri = Drifveri.find(params[:id])
-
+    @ofverdrif = Drifvare.find_by_id @drifveri.ofverdrif_id
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @drifveri }

@@ -23,6 +23,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'formtastic'
 gem 'jquery-rails'
 gem 'haml-rails', '>= 0.3.4'
 gem 'twitter-bootstrap-rails'
